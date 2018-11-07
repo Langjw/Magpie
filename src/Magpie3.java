@@ -36,6 +36,10 @@ public class Magpie3 {
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (statement.indexOf("cat") >= 0
+				|| statement.indexOf("dog") >= 0
+				|| statement.indexOf("pet") >= 0) {
+			response = "Tell me more about your pets";
 		} else {
 			response = getRandomResponse();
 		}
@@ -113,6 +117,10 @@ public class Magpie3 {
 	 */
 	private int findKeyword(String statement, String goal) {
 		return findKeyword(statement, goal, 0);
+		// findKeyword("She's my sister", "sister", 0);
+		// findKeyword("Brother Tom is helpful", "brother", 0);
+		// findKeyword("I can't catch wild cats", "cats", 0);
+		// findKeyword("I know nothing about snow plows", "no", 0);
 	}
 
 	/**
